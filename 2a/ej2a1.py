@@ -50,18 +50,44 @@ Exemple:
 """
 
 
-def sum_even_numbers_in_list_while(list_numbers):
-    # Write here your code
-    pass
+# FUNCION PARA ENCONTRAR LOS PARES
+def pares_lista(shopping_list):
+    list_numbers= []
+    for numero in shopping_list:
+        if numero % 2 == 0:
+            list_numbers.append(numero)
+    return list_numbers
 
+# FUNCION SUMAR CON FOR
+def sum_even_numbers_in_list_for(shopping_list):
+    pares = pares_lista(shopping_list)
+    suma = 0
+    for i in pares:
+        suma += i
+    return suma
 
-def sum_even_numbers_in_list_for(list_numbers):
-    # Write here your code
-    pass
+# FUNCION SUMAR CON WHILE
+def sum_even_numbers_in_list_while(shopping_list):
+    pares = pares_lista(shopping_list)
+    suma = 0
+    i=0
+    while i < len(pares):
+        suma += (pares[i]) 
+        i+=1
+    return suma
 
+# FUNCION SUMAR CON DO-WHILE
+def sum_even_numbers_in_list_do_while(shopping_list):
+    pares = pares_lista(shopping_list)
+    suma = 0
+    i = 0
+    while True:
+        suma += pares[i] 
+        i+=1
+        if i >= len(pares):
+            break
+    return suma
 
-def sum_even_numbers_in_list_do_while(list_numbers):
-    # Write here your code
     pass
 
 
