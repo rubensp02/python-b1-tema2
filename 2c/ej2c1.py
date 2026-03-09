@@ -50,7 +50,14 @@ Exemple:
 
 
 def convert_to_integer(string):
-    # Write here your code
+    try:
+        number= int(string)
+        return number
+    except ValueError:
+        return "The string cannot be converted to an integer"
+    except Exception as error:
+        return  "An unexpected error has occurred:" + str(error)
+
     pass
 
 
