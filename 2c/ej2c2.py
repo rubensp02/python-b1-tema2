@@ -55,7 +55,12 @@ Exemple:
 
 
 def get_element_from_list(items_list, index) -> str:
-    # Write here your code
+    try:
+        return items_list[index]
+    except IndexError:
+        return "The specified index is out of the items_list's range"
+    except Exception as error:
+        return "An unexpected error has occurred:" + str(error)
     pass
 
 
