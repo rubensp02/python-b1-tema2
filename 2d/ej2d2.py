@@ -67,7 +67,30 @@ Exemple:
 
 
 def calculate_max_and_min(list_numbers):
-    # Write here your code
+# Check if list_numbers is empty
+    if len(list_numbers) == 0:
+        raise ValueError("La lista está vacía")
+# Check if there are any strings in list_numbers
+    for n in list_numbers:
+        if isinstance(n, str):
+            raise TypeError("La lista contiene valores string")
+   
+   
+    sub_0 = list_numbers[0]
+    for i in list_numbers:
+        if i > sub_0:
+            maximum = i
+            print(f"New Greater found: {maximum}")
+
+        if i < sub_0:
+            minimum = i
+            print(f"New Lesser found: {minimum}")
+    return f"Greater: {maximum} ... Lesser: {minimum}"
+
+
+list_numbers = []
+print(calculate_max_and_min(list_numbers))
+
     pass
 
 
